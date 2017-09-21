@@ -1,0 +1,12 @@
+﻿  Main.cpp
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\sphere.h(37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\sphere.h(40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\sphere.h(71): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\main.cpp(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\test.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\main.cpp(30): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\main.cpp(53): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\main.cpp(92): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\main.cpp(93): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Raytracer.vcxproj -> C:\Users\Manu\Documents\Visual Studio 2015\Projects\Emmanuel_Schmuck_TP_Synthese\TPSynthesePartie3\Raytracer\Debug\Raytracer.exe
+  Raytracer.vcxproj -> C:\Users\Manu\Documents\Visual Studio 2015\Projects\Emmanuel_Schmuck_TP_Synthese\TPSynthesePartie3\Raytracer\Debug\Raytracer.pdb (Partial PDB)
