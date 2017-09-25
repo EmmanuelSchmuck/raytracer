@@ -1,11 +1,18 @@
 ﻿  Main.cpp
-Main.cpp(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\Test.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-Main.cpp(120): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-Main.cpp(144): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-Main.cpp(148): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\test.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\scene.h(99): warning C4101: 'f': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(58): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(27): warning C4101: 'z': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(27): warning C4101: 'y': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(27): warning C4101: 'refractedEnergy': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(27): warning C4101: 'x': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(27): warning C4101: 'reflectedEnergy': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\tpsynthesepartie3\raytracer\raytracer\renderer.h(27): warning C4101: 'd': unreferenced local variable
+Main.cpp(23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating code
-  1 of 205 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+  2 of 228 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

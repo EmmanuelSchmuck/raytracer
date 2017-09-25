@@ -3,19 +3,24 @@
 
 // all other includes are in utils.h
 #include "utils.h"
-#include "Test.h";
+#include "test.h"
+#include "renderer.h"
 
 // crayola color palette
-const vec3 fuschia(181, 51, 137);
-const vec3 blue(31, 117, 254);
-const vec3 green(28, 172, 120);
-const vec3 yellow(253, 255, 0);
-const vec3 white(255, 255, 255);
-const vec3 red(237, 10, 63);
+Vec3 fuschia(181, 51, 137);
+Vec3 blue(31, 117, 254);
+Vec3 green(28, 172, 120);
+Vec3 yellow(253, 255, 0);
+Vec3 orange(255,136,100);
+Vec3 white(255, 255, 255);
+Vec3 black(0, 0, 0);
+Vec3 red(237, 10, 63);
 
 
 
 int main() {
+
+	srand(time(NULL));
 
 	cout << endl << "TP Synthese d'Image" << endl << endl;
 
@@ -24,163 +29,63 @@ int main() {
 
 	cout << endl << "===== spheres : image generation start ... ===== " << endl << endl;
 
+	system("pause");
+
 	const int width = 2048;
 	const int height = 2048;
+	const double fov = 60;
+	const bool useSoftShadows = false;
 
-	const int max_rebound = 50;
+	Renderer renderer(width, height, fov, useSoftShadows);
 
-	// camera fov
-	const double fov = 60 * 3.1415 / 180;
+	Vec3 cameraPosition(0, 10, 20);
 
-	// fog color
-	vec3 fogColor(30,30,60);
+	// camera position, max amount of spheres & lights
+	Scene myScene(cameraPosition, 50, 10);
 
-	// fog max opacity
-	const double fogMaxOpacity = 1.00;
+	// ambient light
+	myScene.setAmbientIntensity(0.1);
 
-	// fog smooth distance (fog will reach max opacity at this distance)
-	const double fogSmoothDist = 120;
-
-	// fog start distance
+	Vec3 fogColor(50, 50, 75);
+	const double fogMaxOpacity = 1;
+	const double fogSmoothDist = 100;
 	const double fogStartDist = 60;
+	const double fogExponent = 1.35;
 
-	// fog exponent (power law)
-	const double fogExponent = 1.5;
+	myScene.setFog(fogColor,fogExponent,fogMaxOpacity,fogSmoothDist,fogStartDist);
 
-	vec3 cameraPosition(0, 10, 20);
-
-	// array of vec3 with all the pixels
-	vec3* pixels = new vec3[width * height];
-
-	// camera position and max amount of spheres
-	scene myScene(cameraPosition, 50, 10);
-
-	// 7 spheres
+	// mirror spheres
+	myScene.addSphere(Vec3(0, -10, -50), 15, blue/255, 0.25, 10, 1, 0.6);
 	
-	myScene.addSphere(vec3(-15, 15, -50), 2, vec3(255, 255, 255) * 100, -1);
-	myScene.addSphere(vec3(15, 15, -50), 2, vec3(255, 255, 255) * 100, -1);
-
-	myScene.addSphere(vec3(0, -5, -50), 10, white, 1);
-	
-	myScene.addSphere(vec3(25, -15, -50), 10, white, 1);
-	myScene.addSphere(vec3(-25, -15, -50), 10, white, 1);
-	myScene.addSphere(vec3(25, -15, -110), 10, white, 1);
-	myScene.addSphere(vec3(-25, -15, -110), 10, white,1);
-	myScene.addSphere(vec3(25, 35, -50), 10, white, 1);
-	myScene.addSphere(vec3(-25, 35, -50), 10, white, 1);
-	myScene.addSphere(vec3(25, 35, -110), 10, white, 1);
-	myScene.addSphere(vec3(-25, 35, -110), 10, white, 1);
-	
+	myScene.addSphere(Vec3(0, 5, -75), 10, red/255, 0.4, 10, 1, 0);
+	myScene.addSphere(Vec3(0, 40, -90), 10, yellow / 255, 0.4, 10, 1, 0);
+	myScene.addSphere(Vec3(25, -15, -60), 12, yellow /255, 0.5, 10, 1, 0.5);
+	myScene.addSphere(Vec3(-25, -15, -60), 12, yellow /255, 0.5, 10, 1, 0.5);
+	myScene.addSphere(Vec3(25, 35, -60), 12, yellow /255, 0.5, 10, 1, 0.5);
+	myScene.addSphere(Vec3(-25, 35, -60), 12, yellow /255, 0.5, 10, 1, 0.5);
+	myScene.addSphere(Vec3(25, -15, -110), 12, white /255, 0.9, 10, 1, 0);
+	myScene.addSphere(Vec3(-25, -15, -110), 12, white /255,0.9, 10, 1, 0);
+	myScene.addSphere(Vec3(25, 35, -110), 12, white /255, 0.9, 10, 1, 0);
+	myScene.addSphere(Vec3(-25, 35, -110), 12, white / 255, 0.9, 10, 1, 0);
 	
 	// "walls"
-	myScene.addSphere(vec3(0, -2000-20, 0), 2000, yellow,0.15);
-	myScene.addSphere(vec3(0, 2000 +50, 0), 2000, fuschia,0.15);
-	myScene.addSphere(vec3(-2000-50, 0, 0), 2000, green,0);
-	myScene.addSphere(vec3(2000+50, 0, 0), 2000, blue,0);
-	myScene.addSphere(vec3(0, 0, -2000-150), 2000, white ,0);
-	myScene.addSphere(vec3(0, 0, 2000+150), 2000, white, 0);
+	myScene.addSphere(Vec3(0, -2000-20, 0), 2000, white / 255, 0.25, 1, 0.5, 0);
+	myScene.addSphere(Vec3(0, 2000 +50, 0), 2000, fuschia / 255, 0.05, 1, 0.5, 0);
+	myScene.addSphere(Vec3(-2000-40, 0, 0), 2000, green / 255, 0.05, 1, 0.5, 0);
+	myScene.addSphere(Vec3(2000+40, 0, 0), 2000, blue / 255, 0.05, 1, 0.5, 0);
+	myScene.addSphere(Vec3(0, 0, -2000-150), 2000, white / 255, 0, 1, 0.5, 0);
+	myScene.addSphere(Vec3(0, 0, 2000+150), 2000, yellow / 255, 0, 1, 0.5, 0);
 
-	//lights
-	myScene.addLight(vec3(-15, 15, -50), white, 0.35, 1);
-	myScene.addLight(vec3(15, 15, -50), white, 0.35, 1);
+	//lights + unlit spheres (to symbolize light sources)
+	myScene.addLight(Vec3(20, 10, -70), white, 800, 3, 2);
+	myScene.addSphere(Vec3(20, 10, -70), 2, Vec3(1, 1, 1) * 100, -1, 0, 0, 0);
+	myScene.addLight(Vec3(-20, 10, -70), white, 800, 3, 2);
+	myScene.addSphere(Vec3(-20, 10, -70), 2, Vec3(1, 1, 1) * 100, -1, 0, 0, 0);
+	myScene.addLight(Vec3(-0, 15, 20), white, 3, 3, 0.2);
 
-	const double ambientIntensity = 0.15;
-
-	// setup
-	double x, y, z, opacity, depth, reflectance, d;
-	double t = 0;
-	int rebound = 0;
-	ray _ray, _rayLight;
-	vec3 finalColor, rgbLight, pos;
-	double intensity = 0;
-	sphere sphereHit;
-	pointLight lightHit;
-	bool stop;
-
-	cout << "calculating pixel values..." << endl;
-
-	// calculating the rgb value for each pixel
-	for (int i = 0; i < height; i++) {
-
-		// display progress
-		cout << "\r" <<"  "<< setprecision(3) << 100 * (double)i / height << " %      ";
-
-		for (int j = 0; j < width; j++) {
-
-			// xyz for ray direction
-			x = j - width / 2;
-			y = - i + height / 2;
-			z = -width / (2 * tan(fov / 2));
-
-			_ray.set(myScene.getCameraPosition(), vec3(x, y, z));
-
-			// if we hit a scene object (sphere)
-			if (myScene.intersectSpheres(_ray, t, sphereHit)) {
-
-				pos = _ray.getPosAtDistance(t);
-
-				depth = (cameraPosition - pos).norm();
-
-				d = depth;
-
-				intensity = myScene.getLightingAtPoint(pos+sphereHit.getNormalAtPos(pos)*0.001, rgbLight);
-
-				if (sphereHit.getReflectance() > -0.01) {
-					finalColor = sphereHit.getColor() * (intensity + ambientIntensity);
-				}
-				else { finalColor = sphereHit.getColor(); }
-
-				// reflections =======================
-				rebound = 0;
-				stop = false;
-				//dirty
-				reflectance = 1;
-				while (rebound < max_rebound && max_rebound >0 && !stop) {
-					stop = true;
-					reflectance = reflectance * sphereHit.getReflectance() ;
-
-					if (reflectance > 0.0001){	
-
-						_ray = sphereHit.getReflectedRay(_ray, _ray.getPosAtDistance(t));
-
-						if (myScene.intersectSpheres(_ray, t, sphereHit)) {
-
-							pos = _ray.getPosAtDistance(t);
-
-							intensity = myScene.getLightingAtPoint(pos + sphereHit.getNormalAtPos(pos)*0.001, rgbLight);
-
-							//cout << "intensity : " << intensity << " : reflectance : " << reflectance << endl;
-
-							finalColor = vec3::lerp(finalColor, sphereHit.getColor()* (intensity + ambientIntensity), reflectance);
-
-							depth = (cameraPosition - pos).norm();
-							opacity = lerp(0, fogMaxOpacity, pow(clamp((depth-fogStartDist) / fogSmoothDist,0,1), fogExponent));
-							finalColor = vec3::lerp(finalColor, vec3::lerp(finalColor, fogColor*(intensity + ambientIntensity), opacity), reflectance);
-
-								
-
-							stop = false;
-						}
-						
-					}
-					rebound++;
-				} ;
-
-				// blend objects with power-law fog
-
-				opacity = lerp(0, fogMaxOpacity, pow(clamp((d - fogStartDist) / fogSmoothDist, 0, 1), fogExponent));
-				finalColor = vec3::lerp(finalColor, fogColor* (intensity + ambientIntensity), opacity);
-
-			
-			}
-			else {	
-				finalColor.set(0, 0, 0);
-			}
-			
-			// fill pixel array with final rgb values
-			pixels[i*width + j] = finalColor;
-		}
-	}
+	// array of Vec3 with all the pixels
+	Vec3* pixels;
+	pixels = renderer.renderScene(myScene);
 
 	cout << endl << "saving image to ppm file..." << endl;
 

@@ -113,8 +113,10 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="fog.h" />
     <ClInclude Include="light.h" />
     <ClInclude Include="Ray.h" />
+    <ClInclude Include="renderer.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="Test.h" />

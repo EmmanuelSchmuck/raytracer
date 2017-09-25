@@ -5,8 +5,8 @@
 void makeTest() {
 	//testing vectors
 
-	vec3 v1(2, 2, 1);
-	vec3 v2(-3, 1, 3);
+	Vec3 v1(2, 2, 1);
+	Vec3 v2(-3, 1, 3);
 
 	cout << endl << "===== vector test =====" << endl << endl;
 
@@ -90,8 +90,8 @@ void makeTest() {
 	const int width = 800;
 	const int height = 500;
 
-	// array of vec3 with all the pixels
-	vec3* pixels = new vec3[width * height];
+	// array of Vec3 with all the pixels
+	Vec3* pixels = new Vec3[width * height];
 
 	float r, g, b;
 
@@ -101,7 +101,7 @@ void makeTest() {
 			r = 255 * (float)i / height;
 			g = 000;
 			b = 255 * (float)j / width;
-			pixels[i*width + j] = vec3(r, g, b);
+			pixels[i*width + j] = Vec3(r, g, b);
 		}
 	}
 

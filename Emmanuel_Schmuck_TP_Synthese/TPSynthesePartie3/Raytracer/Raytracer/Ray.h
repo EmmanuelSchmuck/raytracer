@@ -1,27 +1,39 @@
 #pragma once
 
 #include "vec.h"
+#include "sphere.h"
 
 
-class ray {
+class Ray {
 
-	vec3 origin;
-	vec3 direction;
+	Vec3 origin;
+	Vec3 direction;
+	double energy;
+	bool inside;
+	int containerIndex;
+	double alpha;
 
 public:
 
 	// constructors
-	ray() { origin = vec3(); direction = vec3(); };
-	ray(vec3 o, vec3 d) { origin = o; direction = d.normalize(); };
+	Ray() { alpha = 0; };
+	Ray(Vec3 o, Vec3 d, double e, bool _inside) { origin = o; direction = d.normalize(); energy = e; inside = _inside; containerIndex = -1; alpha = 0; };
 
 	// get, set
-	vec3 getOrigin() { return origin; };
-	vec3 getDirection() { return direction; };
-	void setOrigin(vec3 o) { origin = o; };
-	void setDirection(vec3 d) { direction = d.normalize(); };
-	void set(vec3 o, vec3 d) { origin = o; direction = d.normalize(); };
+	Vec3 getOrigin() { return origin; };
+	Vec3 getDirection() { return direction; };
+	double getEnergy() { return energy; };
+	bool isInside() { return inside; };
+	void setOrigin(Vec3 o) { origin = o; };
+	void setEnergy(double e) { energy = e; };
+	void setDirection(Vec3 d) { direction = d.normalize(); };
+	void setContainerIndex(int i) { containerIndex = i; };
+	int getContainerIndex() { return containerIndex; };
+	void setAlpha(double a) { alpha = a; };
+	double getAlpha() { return alpha; };
+	void set(Vec3 o, Vec3 d, double e, bool _inside) { origin = o; direction = d.normalize(); energy = e; inside = _inside; };
 
-	// get 3D point (vec3) at distance d (float) from ray origin following ray direction
-	vec3 getPosAtDistance(float d) { vec3 v = origin + direction*d; return v; };
+	// get 3D point (Vec3) at distance d (float) from ray origin following ray direction
+	Vec3 getPosAtDistance(float d) { Vec3 v = origin + direction*d; return v; };
 	
 };

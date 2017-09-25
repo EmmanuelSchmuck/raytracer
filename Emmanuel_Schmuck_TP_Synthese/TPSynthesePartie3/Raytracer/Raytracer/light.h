@@ -2,22 +2,23 @@
 
 #include "utils.h"
 
-class pointLight {
+class PointLight {
 
-	vec3 position;
-	vec3 color;
+	Vec3 position;
+	Vec3 color;
 	double intensity;
 	double radius;
+	double fallof;
 
 public:
 
-	pointLight() {};
-	pointLight(vec3 pos, vec3 col, double i, double rad) { position = pos; color = col; intensity = i; radius = rad; };
+	PointLight() {};
+	PointLight(Vec3 pos, Vec3 col, double i, double rad, double f) { position = pos; color = col; intensity = i; radius = rad; fallof = f; };
 
-	vec3 getPosition() { return position; };
-	vec3 getColor() { return color; };
+	Vec3 getPosition() { return position; };
+	Vec3 getColor() { return color; };
 	double getIntensity() { return intensity; };
 	double getRadius() { return radius; };
-
+	double getFallof() { return fallof; };
 
 };
