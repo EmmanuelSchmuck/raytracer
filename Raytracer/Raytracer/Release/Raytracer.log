@@ -1,0 +1,47 @@
+﻿  Main.cpp
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\utils.h(119): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\test.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(75): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(76): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(220): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(221): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(222): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(223): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(232): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(233): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(359): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(404): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\primitives.h(408): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\boundingbox.h(36): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\boundingbox.h(57): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\boundingbox.h(78): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\boundingbox.h(79): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(80): warning C4018: '<=': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(111): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(186): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(196): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(227): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(281): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(307): warning C4101: 'r2': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(307): warning C4101: 'r1': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(307): warning C4101: 't_temp': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(361): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\scene.h(367): warning C4018: '<': signed/unsigned mismatch
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(115): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(32): warning C4101: 'z': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(36): warning C4101: 'k': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(32): warning C4101: 'y': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(32): warning C4101: 'refractedEnergy': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(32): warning C4101: 'x': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(32): warning C4101: 'reflectedEnergy': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(32): warning C4101: 'd': unreferenced local variable
+c:\users\manu\documents\visual studio 2015\projects\emmanuel_schmuck_tp_synthese\emmanuel_schmuck_tp_synthese\tpsynthesefini\raytracer\raytracer\renderer.h(141): warning C4101: 's': unreferenced local variable
+  Generating code
+  1 of 573 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    13 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Raytracer.vcxproj -> C:\Users\Manu\Documents\Visual Studio 2015\Projects\Emmanuel_Schmuck_TP_Synthese\Emmanuel_Schmuck_TP_Synthese\TPSyntheseFini\Raytracer\Release\Raytracer.exe
+  Raytracer.vcxproj -> C:\Users\Manu\Documents\Visual Studio 2015\Projects\Emmanuel_Schmuck_TP_Synthese\Emmanuel_Schmuck_TP_Synthese\TPSyntheseFini\Raytracer\Release\Raytracer.pdb (Full PDB)
